@@ -20,7 +20,7 @@ class PlatformDeviceId {
       } else if (Platform.isAndroid) {
         // AndroidDeviceInfo androidInfo = await deviceInfoPlugin.androidInfo;
        
-        deviceId = await AndroidId.getId() ?? '';
+        deviceId = (await AndroidId().getId()) ?? '';
        
         // deviceId = androidInfo.androidId;
       } else if (Platform.isIOS) {
